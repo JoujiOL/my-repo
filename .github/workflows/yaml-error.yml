@@ -3,5 +3,5 @@ on: push
 jobs:
   run:
     runs-on: ubuntu-latest
-    steps: # インデントが2文字ずれている
+      steps: # インデントが2文字ずれている
       - run: echo "YAML Syntax Error"
