@@ -1,12 +1,13 @@
 name: Manual
 on:
   workflow_dispatch:                     # 手動実行イベント
-    inputs:
+#    inputs:
 #      greeting:                          # 入力パラメータ名
 #        type: string                     # データ型
 #        default: Hello                   # 入力パラメータのデフォルト値
 #        required: true                   # 入力パラメータの必須フラグ
 #        description: A cheerful word     # 入力パラメータの概要
+    inputs:
       log-level:
         type: choice
         options:
