@@ -1,7 +1,8 @@
 name: Schedule
 on:
-  schedule: #定期実行イベント
-    - cron: '*/15 * * * *'
+   workflow_dispatch
+#  schedule: #定期実行イベント
+#    - cron: '*/15 * * * *'
 jobs:
   run:
     runs-on: ubuntu-latest
