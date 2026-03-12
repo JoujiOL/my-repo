@@ -4,10 +4,17 @@ jobs:
   print: 
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ github.actor }}" # githubコンテキストの参照
-      - run: echo "${{ github.run_id }}"
-      - run: echo "${{ github.head_ref }}"
-      - run: echo "${{ github.workspace }}"
-      - run: echo "${{ github.repository }}"
-      - run: echo "${{ github.action }}"
-      - run: echo "${{ github.event.pull_request }}"
+      - run: echo "github.actor ${{ github.actor }}" # githubコンテキストの参照
+      - run: echo "github.run_id ${{ github.run_id }}"
+      - run: echo "github.head_ref ${{ github.head_ref }}"
+      - run: echo "github.workspace ${{ github.workspace }}"
+      - run: echo "github.repository ${{ github.repository }}"
+      - run: echo "github.action ${{ github.action }}"
+      - run: echo "github.event.pull_request ${{ github.event.pull_request }}"
+    steps:
+      - run: echo "runner name ${{ runner.name }}"
+      - run: echo "runner os ${{ runner.os }}"
+      - run: echo "runner arch ${{ runner.arch }}"
+      - run: echo "runner temp ${{ runner.temp }}"
+      - run: echo "runner tool_cache ${{ runner.tool_cache }}"
+      - run: echo "runner debug ${{ runner.debug }}"
